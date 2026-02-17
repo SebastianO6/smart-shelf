@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ "Edit Book" if book else "Add Book" }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="admin-header">
+    <h1>{{ "Edit Book" if book else "Add New Book" }}</h1>
+    <a href="/admin" class="btn-secondary">Back to Dashboard</a>
+</header>
+
+<div class="container form-container">
+
+    <form method="POST" class="styled-form">
+
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title"
+                   value="{{ book['title'] if book else '' }}"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Author</label>
+            <input type="text" name="author"
+                   value="{{ book['author'] if book else '' }}"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <input type="text" name="category"
+                   value="{{ book['category'] if book else '' }}"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Quantity</label>
+            <input type="number" name="quantity"
+                   value="{{ book['quantity'] if book else 1 }}"
+                   required>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            {{ "Update Book" if book else "Add Book" }}
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

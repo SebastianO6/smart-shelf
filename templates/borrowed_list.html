@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borrowed Books</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+
+<header class="admin-header">
+    <h1>Borrowed Books</h1>
+    <a href="/admin" class="btn-secondary">Back to Dashboard</a>
+</header>
+
+<div class="container">
+
+<div class="top-actions">
+    <input type="text" class="live-search"
+           placeholder="Search borrowed books..."
+           value="{{ search }}">
+</div>
+
+<table>
+<thead>
+<tr>
+    <th>Book</th>
+    <th>Student Name</th>
+    <th>Student ID</th>
+    <th>Borrow Date</th>
+    <th>Due Date</th>
+    <th>Status</th>
+    <th>Return</th>
+</tr>
+</thead>
+
+<tbody>
+{% for record in records %}
+<tr class="{% if record['due_date'] < today|string %}overdue{% endif %}">
+    <td>{{ record['title'] }}</td>
+    <td>{{ record['student_name'] }}</td>
+    <td>{{ record['student_id'] }}</td>
+    <td>{{ record['borrow_date'] }}</td>
+    <td>{{ record['due_date'] }}</td>
+    <td>
+        {% if record['due_date'] < today|string %}
+            <span class="status-overdue">Overdue</span>
+        {% else %}
+            <span class="status-ontime">On Time</span>
+        {% endif %}
+    </td>
+    <td>
+        <a href="/return/{{ record['id'] }}" class="action-link borrow">
+            Return
+        </a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+</div>
+</body>
+</html>

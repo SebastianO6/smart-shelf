@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Shelf Library</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Smart Shelf Library</h1>
+    <a href="/admin-login" class="admin-btn">Admin</a>
+</header>
+
+<div class="container">
+    <input type="text" class="live-search" placeholder="Search by title or author..." value="{{ search }}">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Available</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book['title'] }}</td>
+                <td>{{ book['author'] }}</td>
+                <td>{{ book['category'] }}</td>
+                <td>{{ book['quantity'] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

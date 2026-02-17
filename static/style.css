@@ -1,0 +1,228 @@
+/* ===== BASE ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #2e1a0f;
+}
+
+/* ===== HEADERS ===== */
+.main-header,
+.admin-header {
+    background-color: #4b2e1e;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1,
+.admin-header h1 {
+    margin: 0;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background-color: #5c3b28;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #3d2618;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #4b2e1e;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-logout {
+    background-color: #8b0000;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.admin-btn {
+    background-color: #3d2618;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.admin-btn:hover {
+    background-color: #2a1a12;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th {
+    background-color: #4b2e1e;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+    background-color: #f9f4f0;
+}
+
+/* ===== ACTION LINKS ===== */
+.action-link {
+    margin-right: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #5c3b28;
+}
+
+.action-link.delete {
+    color: #8b0000;
+}
+
+.action-link.borrow {
+    color: #006400;
+}
+
+/* ===== INPUTS ===== */
+input[type=text],
+input[type=password],
+input[type=number] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f1ed;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #4b2e1e;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: #4b2e1e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===== HIGHLIGHT SEARCH ===== */
+span.highlight {
+    background-color: #ffeb3b;
+}
+
+
+/* ===== FORM STYLING ===== */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.styled-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #4b2e1e;
+}
+
+.styled-form input {
+    width: 100%;
+}
+
+/* ===== TOP ACTION BAR ===== */
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-overdue {
+    color: #8b0000;
+    font-weight: 600;
+}
+
+.status-ontime {
+    color: #006400;
+    font-weight: 600;
+}
+
+/* ===== OVERDUE ROW ===== */
+tr.overdue {
+    background-color: #fff2f2;
+}
